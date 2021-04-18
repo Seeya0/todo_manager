@@ -1,1 +1,1 @@
-web: gunicorn todo_manager-project.wsgi
+web: gunicorn todo_manager.wsgi
