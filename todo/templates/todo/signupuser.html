@@ -3,7 +3,7 @@
 {% block content %}
     <div class="row justify-content-center mt-5">
         <div class="col-md-5">
-            <h2>Sign Up</h2>
+            <h2>新規登録</h2>
         </div>
     </div>
     <div class="row justify-content-center mt-5">
@@ -16,23 +16,23 @@
             <form method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="username">Username</label>
+                    <label for="username">ユーザーネーム</label>
                     <input type="text" name="username" class="form-control" id="username" aria-describedby="usernameHelp">
-                    <small id="usernameHelp" class="form-text text-muted">Your username must be unique. We'll let you know if someone has taken it already.</small>
+                    <small id="usernameHelp" class="form-text text-muted">すでに使用されているユーザーネームを使うことはできません。ユーザーネームが被った場合はアラートが出ます。</small>
                 </div>
                 <div class="form-group">
-                    <label for="password1">Password</label>
+                    <label for="password1">パスワード</label>
                     <input type="password" name="password1" class="form-control" id="password1">
                 </div>
                 <div class="form-group">
-                    <label for="password2">Confirm Password</label>
+                    <label for="password2">パスワードの確認</label>
                     <input type="password" name="password2" class="form-control" id="password2">
                 </div>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <button type="submit" class="btn btn-primary">新規登録</button>
             </form>
             <hr>
             <div class="text-center">
-                Do you already have an account? <a href="{% url 'loginuser' %}">Login here</a>
+                すでにアカウントをお持ちの方は <a href="{% url 'loginuser' %}">こちらでログイン</a>
             </div>
         </div>
     </div>
